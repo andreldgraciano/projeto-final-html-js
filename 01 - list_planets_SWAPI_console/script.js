@@ -4,9 +4,10 @@ async function loadPlanets(url = 'https://swapi.dev/api/planets/', allPlanets = 
   allPlanets = allPlanets.concat(data.results);
 
   if (data.next) {
-      return loadPlanets(data.next, allPlanets);
+    return loadPlanets(data.next, allPlanets);
   } else {
-      console.log(allPlanets);
+    console.log(allPlanets);
+    document.getElementById("paragraph").innerHTML = "Dados disponiveis no console! (F12)";
   }
 };
 
